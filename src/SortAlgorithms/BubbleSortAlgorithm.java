@@ -1,36 +1,27 @@
 package SortAlgorithms;
 
 import display.ConsoleDisplay;
+import display.Display;
 
-public class BubbleSortAlgorithm implements SortAlgorithm {
-    @Override
-    public Integer[] sort(Integer[] unsortedArray) {
-        boolean arrayUnsorted;
-
-        do {
-            ConsoleDisplay.printArray(unsortedArray);
-            arrayUnsorted = iterateWithAlgorithm(unsortedArray);
-
-        } while (!arrayUnsorted);
-
-        ConsoleDisplay.printArray(unsortedArray);
-
-        return unsortedArray;
+public class BubbleSortAlgorithm extends AbstractSortAlgorithm {
+    public BubbleSortAlgorithm(Display display) {
+        super(display);
     }
 
-    private boolean iterateWithAlgorithm(Integer[] unsortedArray) {
-        boolean arraySorted = true;
+    @Override
+    public boolean iterateThroughArray(Integer[] array) {
+        boolean continueSorting = false;
 
-        for (int i = 0; i < unsortedArray.length -1; i++) {
-            if (unsortedArray[i] > unsortedArray[i + 1]) {
-                Integer numberToChange = unsortedArray[i];
+        for (int i = 0; i < array.length -1; i++) {
+            if (array[i] > array[i + 1]) {
+                Integer numberToChange = array[i];
 
-                unsortedArray[i] = unsortedArray[i + 1];
-                unsortedArray[i + 1] = numberToChange;
-                arraySorted = false;
+                array[i] = array[i + 1];
+                array[i + 1] = numberToChange;
+                continueSorting = true;
             }
         }
 
-        return arraySorted;
+        return continueSorting;
     }
 }

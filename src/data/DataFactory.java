@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class DataFactory {
-    private static int arrayLength = 100;
+    private static int arrayLength = 1000;
 
     public static Integer[] createData() {
         var array = DataFactory.createArrayWithNumbers();

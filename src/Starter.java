@@ -1,12 +1,15 @@
+import SortAlgorithms.AbstractSortAlgorithm;
 import SortAlgorithms.BubbleSortAlgorithm;
-import SortAlgorithms.SortAlgorithm;
 import data.DataFactory;
+import display.ConsoleDisplay;
+import display.Display;
 
 public class Starter {
     public static void main(String[] args) {
         var array = DataFactory.createData();
+        Display display = new ConsoleDisplay();
 
-        SortAlgorithm bubbleSort = new BubbleSortAlgorithm();
+        AbstractSortAlgorithm bubbleSort = new BubbleSortAlgorithm(display);
 
         bubbleSort.sort(array);
 

@@ -1,5 +1,5 @@
 package display;
 
 public interface Display {
-    public void display(Integer[] array);
+    void display(Integer[] array);
 }
