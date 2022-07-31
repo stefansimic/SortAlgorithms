@@ -1,7 +1,7 @@
-package SortAlgorithms;
+package sortAlgorithms;
 
-import display.ConsoleDisplay;
 import display.Display;
+
 
 public class BubbleSortAlgorithm extends AbstractSortAlgorithm {
     public BubbleSortAlgorithm(Display display) {

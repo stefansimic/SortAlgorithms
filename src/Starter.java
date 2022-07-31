@@ -1,8 +1,8 @@
-import SortAlgorithms.AbstractSortAlgorithm;
-import SortAlgorithms.BubbleSortAlgorithm;
 import data.DataFactory;
 import display.ConsoleDisplay;
 import display.Display;
+import sortAlgorithms.AbstractSortAlgorithm;
+import sortAlgorithms.BubbleSortAlgorithm;
 
 public class Starter {
     public static void main(String[] args) {
